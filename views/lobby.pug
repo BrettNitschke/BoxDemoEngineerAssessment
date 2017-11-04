@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  input(type="hidden", id="fname", value=folderid)
+  input(type="hidden", id="accessToken", value=token)
+  img(src="../images/bofabanner.jpg" style="width:1000px;height200px;display:block;margin:auto;" align="center")
+  div(class="container" style="width:1030px" )
+  style.
+    body{
+        background: url(https://i.ytimg.com/vi/J3pF2jkQ4vc/maxresdefault.jpg);
+    }
+    .buik-logo svg {
+      display: none;
+    }
+  script.
+    var folderId = document.getElementById("fname").value;
+    var accessToken = document.getElementById("accessToken").value;
+    var filePicker = new Box.FilePicker();
+    console.log("contentpicker.js called");
+    filePicker.show(folderId, accessToken, {
+      container: '.container'
+    });

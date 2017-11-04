@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <title>Box File Selection</title>
+
+    <!-- polyfill.io only loads the polyfills your browser needs -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl"></script>
+
+    <!-- Latest version of the picker css for your locale -->
+    <link rel="stylesheet" href="https://cdn01.boxcdn.net/platform/elements/1.6.0/en-US/picker.css" />
+</head>
+<body>
+    <div class="container" style="height:600px"></div>
+    <!-- Latest version of the picker js for your locale -->
+    <script src="https://cdn01.boxcdn.net/platform/elements/1.6.0/en-US/picker.js"></script>
+    <script>
+      	var folderId = '0';
+      	var accessToken = 'DhpfMJajuL6EkBHK2EcBa5VEbaSe21Vf';
+      	var filePicker = new Box.FilePicker();
+      	filePicker.show(folderId, accessToken, {
+            container: '.container'
+        });
+    </script>
+</body>
+</html>
