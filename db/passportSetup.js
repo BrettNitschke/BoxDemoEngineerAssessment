@@ -1,3 +1,8 @@
+
+
+//this module is used for user authentication
+
+
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 
